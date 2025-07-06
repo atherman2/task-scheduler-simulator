@@ -8,9 +8,9 @@ class FcfsAlgorithm(Algorithm):
         
         self._tasks_deque: deque[Task] = deque()
     
-    def get_scheduled_task(self, new_task=None):
+    def get_scheduled_task(self, new_task=TaskEnum.NO_TASK):
         
-        if new_task != None:
+        if new_task != TaskEnum.NO_TASK:
 
             self._tasks_deque.append(new_task)
         while True:
