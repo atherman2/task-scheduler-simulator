@@ -15,9 +15,7 @@ def task_dict(info_lines: list[str]) -> dict[int, Task]:
 
             task_info = [task_id, task_duration, task_priority]
             task_dictionary[task_enter_time] = Task(task_info)
-    except:
+    except Exception:
 
-        print("\nERROR: The input must be in the format:")
-        print("<task_id:str>;<task_enter_time:int>;<task_duration:int>;<task_priority:int>")
-        return None
+        raise ValueError("\nERROR: The input must be in the format:\n<task_id:str>;<task_enter_time:int>;<task_duration:int>;<task_priority:int>")
     return task_dictionary
