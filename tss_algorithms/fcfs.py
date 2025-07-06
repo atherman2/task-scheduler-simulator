@@ -1,5 +1,5 @@
 from tss_algorithms.algorithm import *
-from tss_tasks.task import Task
+from tss_tasks.task import *
 from collections import deque
 
 class FcfsAlgorithm(Algorithm):
@@ -17,7 +17,7 @@ class FcfsAlgorithm(Algorithm):
 
             if len(self._tasks_deque) == 0:
 
-                return "no task"
+                return TaskEnum.NO_TASK
             if self._tasks_deque[0].remaining_time <= 0:
 
                 self._tasks_deque.popleft()

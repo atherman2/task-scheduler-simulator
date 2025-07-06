@@ -1,3 +1,9 @@
+from enum import Enum, auto
+
+class TaskEnum(Enum):
+
+    NO_TASK = auto()
+
 class Task:
 
     def __init__(self, info_list=None):
