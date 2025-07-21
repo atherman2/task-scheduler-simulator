@@ -39,7 +39,7 @@ class TaskScheduler:
             scheduled_task = self.algorithm.get_scheduled_task()
         self.task_history.append(scheduled_task)
         self.clock_value += 1
-        if scheduled_task.duration <= 0:
+        if scheduled_task.remaining_time <= 0:
 
             self.tasks_end_time[scheduled_task.id] = self.clock_value
         return scheduled_task
